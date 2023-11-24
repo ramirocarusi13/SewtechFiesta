@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  
+  <title>SewTech - Web de Carga</title>
+</head>
+<body>
+  <div class="loading-screen">
+    <img src="./img/sewtech_argentina_logo.jpg" alt="Logo de carga"><div class='spinner'></div>
+  </div>
+  <header>
+    <img src="./img/sewtech_argentina_logo.jpg" alt="">
+  </header>
+  <main>
+    <h2>Carga tus fotos y videos</h2>
+    <form id="fotoForm" action="/cargarfoto" method="post" enctype="multipart/form-data">
+      <input type="file" name="foto" accept="image/*">
+      <button type="submit">Cargar Foto</button>
+    </form>
+    <form id="videoForm" action="/cargarvideo" method="post" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/*">
+      <button type="submit">Cargar Video</button>
+    </form>
+    <div id="notifications"></div>
+  </main>
+  <div id="presentation" class="presentation-container"></div>
+
+<script src="fullscreen-polyfill.js"></script> <!-- Añade un polyfill para navegadores que no admiten Fullscreen API -->
+<script src="app.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

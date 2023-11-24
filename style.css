@@ -1,0 +1,148 @@
+/* Estilos comunes para todos los tamaños de pantalla */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: orangered;
+}
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Puedes ajustar el color de fondo */
+    z-index: 1000; /* Asegúrate de que la pantalla de carga esté en la parte superior de todo */
+  }
+  
+  .loading-screen img {
+    width: 180px; /* Ajusta el ancho de tu logo de carga */
+    height: auto;
+  }
+  
+  /* Oculta la pantalla de carga después de que la página esté completamente cargada */
+  body.loaded .loading-screen {
+    display: none;
+  }
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin: 0;
+    color: orangered;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    /* Hace que los elementos dentro de main estén en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    /* Asegura que los formularios ocupen el 100% del ancho de main */
+}
+
+input {
+    margin-bottom: 10px;
+    width: 100%;
+    /* Asegura que los inputs ocupen el 100% del ancho de su contenedor */
+}
+
+button {
+    background-color: #0C01FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+.spinner {
+    border: 4px solid orangered;
+    border-left-color: transparent;
+    border-radius: 50%;
+}
+
+.spinner {
+    border: 4px solid orangered;
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+}
+
+
+.spinner {
+    border: 4px solid orangered;
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Estilos específicos para tamaños de pantalla menores, como dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: auto;
+        display: block;
+        margin: 10px auto;
+        /* Añadido margen inferior para separar los botones */
+    }
+}
