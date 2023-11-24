@@ -1,0 +1,10 @@
+version: 1.0
+services:
+  - name: nombre-de-tu-aplicacion
+    source:
+      type: source
+      repository: https://github.com/ramirocarusi13/SewtechFiesta
+      branch: main
+    build:
+      command: comandos-de-construccion (si es necesario)
+      port: 3000  # Puerto en el que tu aplicación escucha las solicitudes
